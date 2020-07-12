@@ -11,6 +11,7 @@ import {NavigationActions} from 'react-navigation';
 
 import scenes from '../scenes';
 import {APP_LAUNCH_SCENE} from '../constants/NavigationConstants';
+import AuthScenes from '../SignInForm/scenes';
 
 const reducerCreate = (params: any) => {
   const defaultReducer = new Reducer(params);
@@ -100,7 +101,8 @@ class NavigationRouter extends Component {
         backAndroidHandler={this.onBackPress}
         wrapBy={observer}>
         <Lightbox key="lightBox">
-          <Stack key="InitialStack">{scenes}</Stack>
+          <Stack key="InitialStack">{AuthScenes}</Stack>
+          <Stack key="SecondStack">{scenes}</Stack>
         </Lightbox>
       </Router>
     );

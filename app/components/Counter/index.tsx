@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
-import {Alert, Button} from 'react-native';
-
+import {Alert, Button, View} from 'react-native';
 class Counter extends Component {
   onPress = () => {
     Alert.alert('Button with adjusted color pressed');
   };
 
   render() {
-    return <Button title="ADD" color="#f194ff" onPress={this.onPress} />;
+    return (
+      <View>
+        <Button title="ADD" color="#f194ff" onPress={this.onPress} />
+      </View>
+    );
   }
 }
 
